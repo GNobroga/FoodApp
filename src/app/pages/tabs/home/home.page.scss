@@ -1,0 +1,28 @@
+ion-header {
+  ion-icon {
+    font-size: 1rem;
+    position: relative;
+    top: 0.15rem;
+  }
+}
+
+
+div.swiper {
+
+  transform: translateY(10%);
+  swiper-slide {
+    height: 33vh;
+
+    ion-img {
+      width: 100%;
+      height: 30vh;
+
+      &::part(image) {
+        border-radius: 1rem;
+        width: 100%;
+      }
+    }
+
+  }
+
+}

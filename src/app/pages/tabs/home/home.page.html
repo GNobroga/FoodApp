@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">
+      Home
+      <ion-icon name="chevron-down"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- https://ionicframework.com/docs/angular/slides -->
+  <div class="swiper">
+    <swiper-container
+    [modules]="swiperModules"
+    [centeredSlides]="true"
+    [slidesPerView]="1.05"
+    [spaceBetween]="20"
+    [autoplay]="{ delay: 1000 }"
+    [pagination]="{ clicklabe: true, dynamicBullets: true }"
+    (doubletap)="alert()">
+    <swiper-slide>
+      <ion-img src="assets/images/1.jpg"/>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-img src="assets/images/2.jpg"/>
+    </swiper-slide>
+  </swiper-container>
+  </div>
+</ion-content>
