@@ -4,10 +4,10 @@
   [autoplay]="{ delay: 1000 }"
   [pagination]="{ clicklabe: true, dynamicBullets: true }"
 >
-  <swiper-slide>
-    <ion-img src="assets/images/1.jpg" />
-  </swiper-slide>
-  <swiper-slide>
-    <ion-img src="assets/images/2.jpg" />
-  </swiper-slide>
+
+  @for(bannerImage of bannerImages; track bannerImage) {
+    <swiper-slide>
+      <ion-img [src]="bannerImage" />
+    </swiper-slide>
+  }
 </swiper-container>

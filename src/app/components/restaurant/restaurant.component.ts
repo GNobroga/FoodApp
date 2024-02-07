@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -6,9 +7,11 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './restaurant.component.html',
   styleUrls: ['./restaurant.component.scss'],
   standalone: true,
-  imports: [IonicModule],
+  imports: [IonicModule, CommonModule],
 })
 export class RestaurantComponent  implements OnInit {
+
+  @Input({ required: true }) restaurant: any;
 
   constructor() { }
 

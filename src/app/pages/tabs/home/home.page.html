@@ -8,9 +8,13 @@
 </ion-header>
 
 <ion-content>
-  <!-- https://ionicframework.com/docs/angular/slides -->
   <div class="p-4">
-    <app-banner [bannerImages]="banners"/>
+
+    @if (banners.length) {
+      <app-banner [bannerImages]="banners"/>
+    } @else {
+      <ion-skeleton-text animated style="height: 34vh;"/>
+    }
 
     <div class="list">
       <ion-list lines="none">
@@ -21,11 +25,11 @@
           </div>
         </ion-list-header>
 
-        <app-restaurant/>
-        <app-restaurant/>
-        <app-restaurant/>
-        <app-restaurant/>
-        <app-restaurant/>
+        @for (restaurant of restaurants; track restaurants) {
+          <app-restaurant [restaurant]="restaurant"/>
+        } @empty {
+          <app-restaurant-skeleton/>
+        }
 
       </ion-list>
     </div>
