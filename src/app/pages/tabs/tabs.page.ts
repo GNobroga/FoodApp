@@ -1,6 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { home, search, cart, person, chevronDown } from "ionicons/icons";
+import { home, search, cart, person, chevronDown, star } from "ionicons/icons";
 import { addIcons } from 'ionicons';
 
 @Component({
@@ -19,6 +19,7 @@ export default class TabsPage {
       cart,
       person,
       chevronDown,
+      star,
     });
   }
 

@@ -1,0 +1,15 @@
+swiper-container {
+  height: 34vh;
+  --swiper-pagination-color: var(--ion-color-primary);
+  --swiper-pagination-bullet-inactive-color: white;
+
+  ion-img {
+    height: 30vh;
+
+    &::part(image) {
+      @apply rounded-md;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

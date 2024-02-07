@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title slot="start">
-      Home
+  <ion-toolbar color="tertiary">
+    <ion-title slot="start" class="font-bold">
+      Principal
       <ion-icon name="chevron-down"></ion-icon>
     </ion-title>
   </ion-toolbar>
@@ -9,21 +9,25 @@
 
 <ion-content>
   <!-- https://ionicframework.com/docs/angular/slides -->
-  <div class="swiper">
-    <swiper-container
-    [modules]="swiperModules"
-    [centeredSlides]="true"
-    [slidesPerView]="1.05"
-    [spaceBetween]="20"
-    [autoplay]="{ delay: 1000 }"
-    [pagination]="{ clicklabe: true, dynamicBullets: true }"
-    (doubletap)="alert()">
-    <swiper-slide>
-      <ion-img src="assets/images/1.jpg"/>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-img src="assets/images/2.jpg"/>
-    </swiper-slide>
-  </swiper-container>
+  <div class="p-4">
+    <app-banner [bannerImages]="banners"/>
+
+    <div class="list">
+      <ion-list lines="none">
+        <ion-list-header class="mb-3">
+          <div>
+              <ion-text class="text-xl">Restaurantes próximos</ion-text>
+              <p class="text-sm text-gray-500">Descubra sabores únicos perto de você</p>
+          </div>
+        </ion-list-header>
+
+        <app-restaurant/>
+        <app-restaurant/>
+        <app-restaurant/>
+        <app-restaurant/>
+        <app-restaurant/>
+
+      </ion-list>
+    </div>
   </div>
 </ion-content>
