@@ -1,0 +1,19 @@
+ion-button.cart-button {
+  position: relative;
+  bottom: 1rem;
+  &::part(native) {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+ion-button.add {
+  position: relative;
+  bottom: 1rem;
+}
+
+ion-thumbnail {
+  --size: 6rem;
+}

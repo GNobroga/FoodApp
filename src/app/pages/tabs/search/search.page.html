@@ -13,7 +13,26 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
+  <ion-list lines="none">
 
+    <ion-list-header>
+      <ion-label>
+        @if (restaurants.length) {
+          <h2>Resultados para "{{ query }}"</h2>
+        }
+      </ion-label>
+    </ion-list-header>
+
+    @if (isLoading()) {
+      <app-restaurant-skeleton/>
+    } @else if (!restaurants.length) {
+      <p class="text-center text-xl">Não há restaurantes</p>
+    } @else {
+      @for (restaurant of restaurants; track restaurant) {
+        <app-restaurant [restaurant]="restaurant"/>
+      }
+    }
+
+  </ion-list>
 </ion-content>

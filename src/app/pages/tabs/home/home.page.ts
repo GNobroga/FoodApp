@@ -5,6 +5,7 @@ import { IonicModule, IonicSlides } from '@ionic/angular';
 import { BannerComponent } from 'src/app/components/banner/banner.component';
 import { RestaurantComponent } from 'src/app/components/restaurant/restaurant.component';
 import { RestaurantSkeletonComponent } from 'src/app/components/skeletons/restaurant-skeleton/restaurant-skeleton.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -32,6 +33,7 @@ export class HomePage implements OnInit {
   ngOnInit() {
     setTimeout(() => {
         this.restaurants.push({
+          id: 1,
           cover: 'assets/images/1.jpg',
           name: 'Butequim',
           shortName: 'butequim',
@@ -45,6 +47,7 @@ export class HomePage implements OnInit {
           price: 95,
         },
         {
+          id: 2,
           cover: 'assets/images/2.jpg',
           name: 'Butequim',
           shortName: 'butequim',
@@ -58,6 +61,7 @@ export class HomePage implements OnInit {
           price: 80,
         },
         {
+          id: 3,
           cover: 'assets/images/3.jpg',
           name: 'Butequim',
           shortName: 'butequim',

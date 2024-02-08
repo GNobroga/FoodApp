@@ -21,11 +21,24 @@ export const routes: Routes = [
         path: 'account',
         loadComponent: () => import('./pages/tabs/account/account.page').then( m => m.AccountPage)
       },
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
     ],
-  },  
+  },
   {
     path: '',
     redirectTo: 'tabs/home',
     pathMatch: 'full',
-  }
+  },
+  {
+    path: 'restaurants/:id',
+    loadComponent: () => import('./pages/tabs/items/items.page').then( m => m.ItemsPage)
+  },
+  {
+    path: '**',
+    redirectTo: 'tabs/home',
+  },
 ];

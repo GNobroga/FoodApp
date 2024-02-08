@@ -25,7 +25,7 @@
           </div>
         </ion-list-header>
 
-        @for (restaurant of restaurants; track restaurants) {
+        @for (restaurant of restaurants; track restaurant.id) {
           <app-restaurant [restaurant]="restaurant"/>
         } @empty {
           <app-restaurant-skeleton/>

@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+   <div class="pb-2">
+      <ion-buttons>
+        <ion-back-button defaultHref="/tabs"></ion-back-button>
+        <ion-label>Voltar</ion-label>
+      </ion-buttons>
+      <section color="teartiary" class="flex flex-col ps-4">
+        <h1 class="text-xl font-bold">Stayfit</h1>
+        <p class="text-sm opacity-80">Castelo, São Paulo, Vitória</p>
+      </section>
+   </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <main class="py-5">
+    <app-item-detail/>
+    <ion-item lines="none">
+      <div class="flex items-center">
+        <ion-toggle color="success">
+          <ion-label>Só vegano</ion-label>
+        </ion-toggle>
+      </div>
+    </ion-item>
+
+    <ion-list>
+      <ion-list-header>
+        <ion-text class="font-bold text-xl">Mar</ion-text>
+      </ion-list-header>
+      <ion-item lines="none">
+        <div class="flex flex-1 gap-3">
+          <ion-thumbnail>
+            <img src="assets/images/1.jpg" alt>
+          </ion-thumbnail>
+          <span class="flex flex-1 justify-between">
+            <div>
+              <h2 class="font-bold">Noodles</h2>
+              <p>Maravilhoso</p>
+              <span>R$ 200.00</span>
+            </div>
+          </span>
+        </div>
+        <ion-button fill="outline" size="default" color="success" slot="end" class="add">
+          Adicionar
+        </ion-button>
+      </ion-item>
+
+      <ion-item lines="none">
+        <div class="flex flex-1 gap-3">
+          <ion-thumbnail>
+            <img src="assets/images/1.jpg" alt>
+          </ion-thumbnail>
+          <span class="flex flex-1 justify-between">
+            <div>
+              <h2 class="font-bold">Noodles</h2>
+              <p>Maravilhoso</p>
+              <span>R$ 200.00</span>
+            </div>
+          </span>
+        </div>
+
+
+      <div class="flex">
+        <ion-button color="success">
+          <ion-icon name="add"></ion-icon>
+        </ion-button>
+        <span class="p-2">0</span>
+        <ion-button>
+          <ion-icon name="remove"></ion-icon>
+        </ion-button>
+      </div>
+
+
+      </ion-item>
+
+    </ion-list>
+  </main>
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar color="tertiary">
+    <div class="px-3 pt-3 flex flex-col gap-1">
+      <ul class="flex gap-1">
+        <li class="border-r-2 pr-2">
+          <span>1</span> Item
+        </li>
+        <li>
+          <span>R$ 200.00</span>
+        </li>
+      </ul>
+      <div class="flex justify-between">
+        <p class="text-sm">Alterações extras podem ser aplicadas</p>
+        <ion-button class="cart-button">
+          Carrinho <ion-icon name="cart" slot="end"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
